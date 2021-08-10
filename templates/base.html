@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Turbo-Flask Streams Demo</title>
+    <style>
+      body {
+  font-family: Arial;
+  color: white;
+  }
+  .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  }
+
+  .left {
+  left: 0;
+  background-color: #111;
+  }
+  .right {
+  right: 0;
+  background-color: #111;
+  }
+
+  .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  }
+
+  .centered img {
+  width: max;
+  border-radius: 0%;
+  }
+  .load {
+  float: left;
+  width: 300px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  }
+  .load th, .load td {
+  padding: 6px;
+  text-align: center;
+  }
+  .loadB {
+  float: bottom;
+  width: 300px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  }
+  .loadB th, .load td {
+  padding: 6px;
+  text-align: center;
+  }
+  .button {
+  background-color: #e7e7e7; color: black;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 9px #999;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ .button:hover {background-color: #f44336}
+ .button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+    </style>
+    {{ turbo() }}
+  </head>
+  <body style="background-color:black">
+  <div class="split left">
+  <div class="left">
+    {% block content %}{% endblock %}
+    {% include "loadavg.html" %}
+    {% include "pni.html" %}
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+   {% include "image.html" %}
+  </div>
+</div>
+  </body>
+</html>

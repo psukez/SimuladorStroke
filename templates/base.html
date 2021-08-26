@@ -85,6 +85,7 @@
 }
 
     </style>
+    <link rel="panel" href="{{ url_for('static', filename='control.html') }}">
     {{ turbo() }}
   </head>
   <body style="background-color:black">
@@ -95,7 +96,7 @@
     {% include "pni.html" %}
   </div>
 </div>
-
+<p><a href=control target="_blank"><input type="button" class="button" name="panel" value="Panel de Control" /></a></p>
 <div class="split right">
   <div class="centered">
    {% include "image.html" %}

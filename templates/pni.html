@@ -1,32 +1,7 @@
 <style>
-  @property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-.PA {
-  animation: counter 20s infinite alternate ease-in-out;
-  counter-reset: num var(--num);
-  font: 800 40px system-ui;
-  padding: 2rem;
-}
-
-.PA::after {
-  content: counter(num);
-}
-
-@keyframes counter {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 180;
-  }
-}
-
 </style>
 <div id="loadB" class="loadB">
   <table style="color:white; border:none">
     <tr><td> </td><td> </td><td> </td><td> </td></tr>
-    <tr><td><H1>Presión Arterial:</H1></td><td style="color:red; font-size:200%"><div class="PA"></div><H1>{{ PAS }}</H1></td><td style="color:white; font-size:350%">/</td><td style="color:red; font-size:200%"><H1>{{ PAD }}</H1></td><td style="color:white; font-size:200%"> mmHg</td> <td><p><input type="button" class="button" name="PNI" value="PNI" /></p></td></tr>
+    <tr><td><H1>Presión Arterial:</H1></td><td style="color:red; font-size:200%"><H1>{{ PAS }}</H1></td><td style="color:white; font-size:350%">/</td><td style="color:red; font-size:200%"><H1>{{ PAD }}</H1></td><td style="color:white; font-size:200%"> mmHg</td> <td></td></tr>
   </table>

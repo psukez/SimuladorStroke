@@ -12,18 +12,18 @@
 <body style bgcolor="powderblue">
     <H1>Proyecto Simulacion en Emergencias Neurologicas - Departamento de Neurologia UC</H1>
     <H2>Panel de Control</H2>
-    <form action="http://localhost:5000/fetch_dataPNI" method="post">
+    <form action="/fetch_dataPNI" method="post">
     <h3>PNI</h3>
          <p>Presión Sistólica  :   <input type="number" name="numberS" style="width: 40px"/></p>
          <p>Presión Diastólica: <input type="number" name="numberD" style="width: 40px"/></p>
          <p><input type="submit" value="Ajustar PNI" /></p>
     </form>
-    <form action="http://localhost:5000/fetch_dataFC" method="post">
+    <form action="/fetch_dataFC" method="post">
     <h3>FC</h3>
          <p>Rango FC:   <input type="number" name="FCmin" style="width: 40px"/> - <input type="number" name="FCmax" style="width: 40px"/></p></p>
          <p><input type="submit" value="Ajustar FC" /></p>
     </form>
-    <form action="http://localhost:5000/fetch_dataSat" method="post">
+    <form action="/fetch_dataSat" method="post">
     <h3>SatO2</h3>
          <p>Rango SatO2:   <input type="number" name="Satmin" style="width: 40px"/> - <input type="number" name="Satmax" style="width: 40px"/></p></p>
          <p><input type="submit" value="Ajustar SatO2" /></p>

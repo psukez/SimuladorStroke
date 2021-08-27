@@ -1,9 +1,10 @@
-import random
-import threading
-import time
+# Programado en Agosto/2021 por Pablo Arroyo Z.
 
 from flask import Flask, render_template, request
 from turbo_flask import Turbo
+import random
+import threading
+import time
 
 app = Flask(__name__, static_url_path='/static')
 app.secret_key = '123456'

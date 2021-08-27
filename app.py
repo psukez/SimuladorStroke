@@ -25,7 +25,7 @@ def update_load():
         print(PNI)
         while True:
             time.sleep(3)
-            turbo.push(turbo.update(render_template('loadavg.html'), 'load'))
+            turbo.push(turbo.replace(render_template('loadavg.html'), 'load'))
             #print(PNI)
             #print(numeroS)
             #print(numeroD)

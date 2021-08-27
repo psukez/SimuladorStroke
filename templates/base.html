@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+   {{ turbo() }}
     <title>Simulador Stroke</title>
     <style>
       body {
@@ -83,10 +84,9 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-    </style>
+</style>
     <link rel="panel" href="{{ url_for('static', filename='control.html') }}">
-    {{ turbo() }}
+
   </head>
   <body style="background-color:black">
   <div class="split left">
